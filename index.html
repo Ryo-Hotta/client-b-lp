@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="学ナビ - 就活支援サービス。28・29卒対象の就活早期化対策相談会、長期インターン無料相談会を実施中。">
+    <title>学ナビ - みんなの"なりたい"を一緒に探そう</title>
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ローディング画面 -->
+    <div id="loading" class="loading-screen">
+        <div class="loading-spinner"></div>
+        <p class="loading-text">学ナビを読み込み中...</p>
+    </div>
+
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">学ナビ</h1>
+                <nav class="nav">
+                    <a href="#hero" class="nav-link">ホーム</a>
+                    <a href="#events" class="nav-link">イベント</a>
+                    <a href="#about" class="nav-link">学ナビとは</a>
+                    <a href="#contact" class="nav-link">お問い合わせ</a>
+                </nav>
+                <a href="#contact" class="header-cta-btn">無料で相談する</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Heroセクション -->
+    <section id="hero" class="hero">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-circle"></div>
+            <div class="shape shape-triangle"></div>
+            <div class="shape shape-square"></div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="hero-target-badge">【新2・3年生向け】</p>
+                    <h2 class="hero-title">
+                        みんなの<span class="highlight">"なりたい"</span>を<br>
+                        一緒に探そう。
+                    </h2>
+                    <p class="hero-subtitle">
+                        就活のスタートは1・2年生、<br>
+                        ゴールは大学3年生の夏。
+                    </p>
+                    <ul class="hero-benefits">
+                        <li><span class="check">✔</span> 就活のプロに</li>
+                        <li><span class="check">✔</span> 無料で</li>
+                        <li><span class="check">✔</span> 個別相談できる</li>
+                    </ul>
+                    <p class="hero-benefits-label">28・29卒向け相談会</p>
+                    <a href="#contact" class="hero-cta-btn">無料で相談してみる</a>
+                </div>
+                <div class="hero-image">
+                    <img src="./images/hero-main.jpg" alt="学生キャラクター" class="illustration-warm" width="480" height="320">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PDFカルーセルセクション -->
+    <section id="pdf-carousel" class="pdf-carousel-section">
+        <div class="container">
+            <h2 class="section-title">開催中のイベント</h2>
+            <p class="section-subtitle">スワイプしてイベント詳細をチェック！</p>
+            
+            <!-- Swiper -->
+            <div class="swiper pdf-swiper">
+                <div class="swiper-wrapper">
+                    <!-- スライド1: 就活早期化対策相談会 -->
+                    <div class="swiper-slide">
+                        <div class="pdf-card" data-pdf-url="pdfs/早期化対策相談会.pdf" data-title="就活早期化対策相談会">
+                            <div class="pdf-thumbnail-container">
+                                <canvas class="pdf-thumbnail" data-pdf-url="pdfs/早期化対策相談会.pdf"></canvas>
+                                <div class="pdf-loading">
+                                    <div class="pdf-loading-spinner"></div>
+                                    <p>読み込み中...</p>
+                                </div>
+                            </div>
+                            <div class="pdf-card-content">
+                                <p class="pdf-card-benefit">✔ 就活の全体像が見える</p>
+                                <h3 class="pdf-card-title">就活早期化対策相談会</h3>
+                                <p class="pdf-card-date">2026年2/11(火)～2/20(木)</p>
+                                <p class="pdf-card-description">28・29卒対象。定員30名。</p>
+                                <button class="pdf-card-btn">詳細を見る</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- スライド2: 自己探究ラボ -->
+                    <div class="swiper-slide">
+                        <div class="pdf-card" data-pdf-url="pdfs/自己探究ラボ.pdf" data-title="自己探究ラボ">
+                            <div class="pdf-thumbnail-container">
+                                <canvas class="pdf-thumbnail" data-pdf-url="pdfs/自己探究ラボ.pdf"></canvas>
+                                <div class="pdf-loading">
+                                    <div class="pdf-loading-spinner"></div>
+                                    <p>読み込み中...</p>
+                                </div>
+                            </div>
+                            <div class="pdf-card-content">
+                                <p class="pdf-card-benefit">✔ 夢中になれるモノが見つかる</p>
+                                <h3 class="pdf-card-title">自己探究ラボ</h3>
+                                <p class="pdf-card-date">東京都港区新橋</p>
+                                <p class="pdf-card-description">夢中になれるモノを見つける。</p>
+                                <button class="pdf-card-btn">詳細を見る</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- スライド3: 長期インターン相談会 -->
+                    <div class="swiper-slide">
+                        <div class="pdf-card" data-pdf-url="pdfs/長期インターン相談会.pdf" data-title="長期インターン無料相談会">
+                            <div class="pdf-thumbnail-container">
+                                <canvas class="pdf-thumbnail" data-pdf-url="pdfs/長期インターン相談会.pdf"></canvas>
+                                <div class="pdf-loading">
+                                    <div class="pdf-loading-spinner"></div>
+                                    <p>読み込み中...</p>
+                                </div>
+                            </div>
+                            <div class="pdf-card-content">
+                                <p class="pdf-card-benefit">✔ 自分に合ったインターンがわかる</p>
+                                <h3 class="pdf-card-title">長期インターン無料相談会</h3>
+                                <p class="pdf-card-date">2026年2/11(水)～2/27(金)</p>
+                                <p class="pdf-card-description">適性診断→最適インターン提案。</p>
+                                <button class="pdf-card-btn">詳細を見る</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- ページネーション -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 問題提起セクション -->
+    <section id="problem" class="problem-section">
+        <div class="container">
+            <h2 class="section-title">3年生の夏に内定が出る時代。</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-badge">25卒</div>
+                    <div class="timeline-content">
+                        <h3>3年6月</h3>
+                        <p>就活開始</p>
+                    </div>
+                </div>
+                <div class="timeline-arrow">→</div>
+                <div class="timeline-item">
+                    <div class="timeline-badge">26卒</div>
+                    <div class="timeline-content">
+                        <h3>3年4月</h3>
+                        <p>早期化</p>
+                    </div>
+                </div>
+                <div class="timeline-arrow">→</div>
+                <div class="timeline-item active">
+                    <div class="timeline-badge">28・29卒</div>
+                    <div class="timeline-content">
+                        <h3>1・2年生</h3>
+                        <p>今から動く</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="concerns-title">こんな不安、ありませんか？</h3>
+            <div class="concerns-grid">
+                <div class="concern-card">
+                    <div class="concern-icon">❓</div>
+                    <p>何から始めればいいか<br>分からない</p>
+                </div>
+                <div class="concern-card">
+                    <div class="concern-icon">😰</div>
+                    <p>周りに差を<br>つけられそう</p>
+                </div>
+                <div class="concern-card">
+                    <div class="concern-icon">💼</div>
+                    <p>長期インターンって<br>必要？</p>
+                </div>
+            </div>
+            <p class="empathy-bridge">それ、今からでも間に合います。</p>
+        </div>
+    </section>
+
+    <!-- 学ナビとは -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <p class="section-empathy">まずは話を聞くだけでも大丈夫。</p>
+            <h2 class="section-title">学ナビとは</h2>
+            <p class="section-subtitle">学生の「なりたい」をサポートする無料サービス</p>
+            
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="./images/self-discovery.jpg" alt="自己発見" class="illustration-warm" width="480" height="320">
+                </div>
+                <div class="about-text">
+                    <div class="feature-item">
+                        <div class="feature-number">01</div>
+                        <div class="feature-content">
+                            <h3>就活早期化に完全対応</h3>
+                            <p>28・29卒向けの早期サポート体制</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-number">02</div>
+                        <div class="feature-content">
+                            <h3>長期インターン紹介連携</h3>
+                            <p>適性診断から最適なインターンをご提案</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-number">03</div>
+                        <div class="feature-content">
+                            <h3>個別サポート（完全無料）</h3>
+                            <p>一人ひとりに寄り添った丁寧なサポート</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="organizer-info">
+                <p><strong>運営</strong>: 株式会社ORIPULA</p>
+                <p><strong>代表取締役</strong>: 国武</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 参加の流れ -->
+    <section id="flow" class="flow-section">
+        <div class="container">
+            <h2 class="section-title">参加の流れ</h2>
+            
+            <div class="flow-steps">
+                <div class="flow-step">
+                    <div class="flow-step-number">STEP 1</div>
+                    <h3>下記フォームから申込</h3>
+                    <p>必要事項を入力して送信</p>
+                </div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">
+                    <div class="flow-step-number">STEP 2</div>
+                    <h3>3営業日以内に日程調整メール</h3>
+                    <p>ご希望の日時をお伺いします</p>
+                </div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">
+                    <div class="flow-step-number">STEP 3</div>
+                    <h3>Zoom URLを受け取り</h3>
+                    <p>当日のアクセス情報をお送りします</p>
+                </div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">
+                    <div class="flow-step-number">STEP 4</div>
+                    <h3>当日（PC+メモ準備）</h3>
+                    <p>リラックスしてご参加ください</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 問い合わせフォーム -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">就活の不安を相談する（無料）</h2>
+            
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="name">お名前 <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required>
+                    <span class="error-message"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">メールアドレス <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-message"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="grade">学年 <span class="required">*</span></label>
+                    <select id="grade" name="grade" required>
+                        <option value="">選択してください</option>
+                        <option value="29卒">29卒（大学1年生）</option>
+                        <option value="28卒">28卒（大学2年生）</option>
+                        <option value="その他">その他</option>
+                    </select>
+                    <span class="error-message"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label>希望イベント <span class="required">*</span></label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="event" value="就活早期化対策相談会">
+                            <span>就活早期化対策相談会</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="event" value="長期インターン相談会">
+                            <span>長期インターン相談会</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="event" value="自己探究ラボ">
+                            <span>自己探究ラボ</span>
+                        </label>
+                    </div>
+                    <span class="error-message"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">相談したいこと（任意）</label>
+                    <textarea id="message" name="message" rows="5"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">無料で相談してみる</button>
+                
+                <p class="form-note">※送信後、3営業日以内にご連絡します</p>
+            </form>
+            
+            <div id="formSuccess" class="form-success" style="display: none;">
+                <div class="success-icon">✓</div>
+                <h3>送信完了！</h3>
+                <p>お申し込みありがとうございます。<br>3営業日以内にご連絡いたします。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <h2 class="section-title">よくある質問</h2>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3 class="faq-question">Q. 本当に無料ですか？</h3>
+                    <p class="faq-answer">A. はい、完全無料です。料金は一切かかりません。</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Q. オンラインですか？</h3>
+                    <p class="faq-answer">A. 相談会はZoomでオンライン開催、自己探究ラボはオフライン（新橋）開催です。</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Q. 1年生でも参加できますか？</h3>
+                    <p class="faq-answer">A. はい！むしろ早めの準備が成功の鍵です。1・2年生大歓迎です。</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Q. 何を準備すればいいですか？</h3>
+                    <p class="faq-answer">A. PC・メモ・就活の悩みだけでOKです。リラックスしてご参加ください。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>学ナビ</h3>
+                    <p>学生支援サービス</p>
+                </div>
+                <div class="footer-info">
+                    <p><strong>運営</strong>: 株式会社ORIPULA</p>
+                    <p><strong>代表取締役</strong>: 国武</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#contact">お問い合わせ</a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2026 学ナビ - 株式会社ORIPULA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 固定CTAボタン（SP用） -->
+    <div id="fixedCta" class="fixed-cta">
+        <a href="#contact" class="fixed-cta-btn">無料で相談してみる</a>
+    </div>
+
+    <!-- PDFモーダル -->
+    <div id="pdfModal" class="pdf-modal">
+        <div class="pdf-modal-background"></div>
+        <div class="pdf-modal-content">
+            <button class="pdf-modal-close" aria-label="閉じる">&times;</button>
+            <h3 id="pdfModalTitle" class="pdf-modal-title"></h3>
+            <iframe id="pdfModalFrame" class="pdf-modal-iframe"></iframe>
+        </div>
+    </div>
+
+    <!-- PDF.js -->
+    <script src="libs/pdfjs/pdf.min.js"></script>
+    <script>
+        // PDF.js workerの設定
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'libs/pdfjs/pdf.worker.min.js';
+    </script>
+    
+    <!-- Swiper JS -->
+    <script src="libs/swiper/swiper-bundle.min.js"></script>
+    
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
