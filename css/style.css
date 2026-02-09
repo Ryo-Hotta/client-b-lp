@@ -60,6 +60,17 @@ img {
     height: auto;
 }
 
+.hero-title + img,
+h2.section-title + img,
+.concerns-title + img,
+.about-section p.section-subtitle + img {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    margin: 16px auto;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -1154,7 +1165,7 @@ a {
     
     .section-subtitle {
         font-size: 0.9375rem;
-        line-height: 1.6;
+        line-height: 1.75;
         margin-bottom: 28px;
         padding: 0 4px;
     }
@@ -1186,8 +1197,8 @@ a {
     }
     
     .hero-subtitle {
-        font-size: 1.0625rem;
-        line-height: 1.6;
+        font-size: 1rem;
+        line-height: 1.7;
         margin-bottom: 14px;
     }
     
@@ -1208,6 +1219,7 @@ a {
         font-size: 1.0625rem;
         min-height: 48px;
         line-height: 1.4;
+        margin-top: 16px;
     }
     
     .timeline {
@@ -1263,6 +1275,22 @@ a {
     .concern-card p {
         font-size: 1rem;
         line-height: 1.6;
+    }
+
+    .header-cta-btn {
+        padding: 12px 24px;
+        min-height: 44px;
+    }
+
+    .submit-btn,
+    .fixed-cta-btn {
+        display: block;
+        width: 100%;
+        max-width: 420px;
+        margin: 20px auto 0;
+        padding: 14px 20px;
+        min-height: 44px;
+        text-align: center;
     }
     
     .concern-icon {
