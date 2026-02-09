@@ -416,6 +416,59 @@ a {
     background-color: var(--bg-white);
 }
 
+.pdf-carousel {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 24px 0 40px;
+}
+
+.event-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.event-card {
+    background-color: var(--bg-white);
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 4px 20px rgba(75, 46, 131, 0.15);
+    transition: var(--transition);
+    border: 1px solid rgba(75, 46, 131, 0.08);
+}
+
+.event-card:hover {
+    box-shadow: 0 8px 30px rgba(75, 46, 131, 0.2);
+}
+
+.event-card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary-deep-purple);
+    margin-bottom: 12px;
+}
+
+.event-card-description {
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.event-card .pdf-card-btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+@media (min-width: 769px) {
+    .event-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 .section-title {
     font-size: 2.5rem;
     font-weight: 900;
@@ -442,7 +495,12 @@ a {
 /* Swiper設定 */
 .pdf-swiper {
     width: 100%;
+    overflow: hidden;
     padding: 20px 0 60px;
+}
+
+.pdf-swiper .swiper-wrapper {
+    align-items: stretch;
 }
 
 .swiper-slide {
@@ -456,6 +514,7 @@ a {
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(75, 46, 131, 0.15);
+    border: 1px solid rgba(75, 46, 131, 0.08);
     transition: var(--transition);
     cursor: pointer;
     max-width: 400px;
@@ -478,9 +537,11 @@ a {
 }
 
 .pdf-thumbnail {
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
     display: block;
+    border-radius: 16px;
+    background: #f3f4f6;
+    min-height: 180px;
 }
 
 .pdf-loading {
@@ -534,6 +595,11 @@ a {
     margin-bottom: 20px;
 }
 
+.pdf-card-body {
+    padding: 25px;
+    background-color: var(--bg-white);
+}
+
 .pdf-card-btn {
     width: 100%;
     padding: 12px;
@@ -563,8 +629,9 @@ a {
 }
 
 @media (max-width: 768px) {
-    .pdf-thumbnail-container {
-        height: 400px;
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none;
     }
 }
 

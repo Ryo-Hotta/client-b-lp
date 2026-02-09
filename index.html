@@ -79,7 +79,7 @@
                     <a href="#contact" class="hero-cta-btn">無料｜就活ルート診断（60分）</a>
                 </div>
                 <div class="hero-image">
-                    <img src="./images/hero-main.jpg" alt="学生キャラクター" class="illustration-warm" width="480" height="320">
+                    <div class="hero-visual-placeholder" aria-hidden="true"></div>
                 </div>
             </div>
         </div>
@@ -146,78 +146,50 @@
         </div>
     </section>
 
-    <!-- PDFカルーセルセクション -->
-    <section id="pdf-carousel" class="pdf-carousel-section">
+    <!-- 開催中のイベント（PDFスライダー・エンドレス） -->
+    <section class="pdf-carousel-section">
         <div class="container">
             <h2 class="section-title">開催中のイベント</h2>
-            <p class="section-subtitle">スワイプしてイベント詳細をチェック！</p>
+            <p class="section-subtitle">イベント詳細をスワイプでチェック！</p>
             
-            <!-- Swiper -->
-            <div class="swiper pdf-swiper">
-                <div class="swiper-wrapper">
-                    <!-- スライド1: 就活早期化対策相談会 -->
-                    <div class="swiper-slide">
-                        <div class="pdf-card" data-pdf-url="pdfs/早期化対策相談会.pdf" data-title="就活早期化対策相談会">
-                            <div class="pdf-thumbnail-container">
-                                <canvas class="pdf-thumbnail" data-pdf-url="pdfs/早期化対策相談会.pdf"></canvas>
-                                <div class="pdf-loading">
-                                    <div class="pdf-loading-spinner"></div>
-                                    <p>読み込み中...</p>
+            <div id="pdf-carousel" class="pdf-carousel">
+                <div class="swiper pdf-swiper" aria-label="開催中のイベント スライダー">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <div class="pdf-card">
+                                <canvas class="pdf-thumbnail" data-pdf-url="pdfs/早期化対策相談会.pdf" aria-label="就活早期化対策相談会"></canvas>
+                                <div class="pdf-card-body">
+                                    <h3 class="pdf-card-title">就活早期化対策相談会</h3>
+                                    <p class="pdf-card-description">就活の早期化に備えるための、今やるべきことを整理します。</p>
+                                    <a class="pdf-card-btn" href="pdfs/早期化対策相談会.pdf" target="_blank" rel="noopener noreferrer">詳細を見る</a>
                                 </div>
-                            </div>
-                            <div class="pdf-card-content">
-                                <p class="pdf-card-benefit">✔ 就活の全体像が見える</p>
-                                <h3 class="pdf-card-title">就活早期化対策相談会</h3>
-                                <p class="pdf-card-date">2026年2/11(火)～2/20(木)</p>
-                                <p class="pdf-card-description">28・29卒対象。定員30名。</p>
-                                <button class="pdf-card-btn">詳細を見る</button>
                             </div>
                         </div>
-                    </div>
-                    
-                    <!-- スライド2: 自己探究ラボ -->
-                    <div class="swiper-slide">
-                        <div class="pdf-card" data-pdf-url="pdfs/自己探究ラボ.pdf" data-title="自己探究ラボ">
-                            <div class="pdf-thumbnail-container">
-                                <canvas class="pdf-thumbnail" data-pdf-url="pdfs/自己探究ラボ.pdf"></canvas>
-                                <div class="pdf-loading">
-                                    <div class="pdf-loading-spinner"></div>
-                                    <p>読み込み中...</p>
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <div class="pdf-card">
+                                <canvas class="pdf-thumbnail" data-pdf-url="pdfs/長期インターン相談会.pdf" aria-label="長期インターン相談会"></canvas>
+                                <div class="pdf-card-body">
+                                    <h3 class="pdf-card-title">長期インターン相談会</h3>
+                                    <p class="pdf-card-description">合う環境・合わない環境を整理し、選び方を明確にします。</p>
+                                    <a class="pdf-card-btn" href="pdfs/長期インターン相談会.pdf" target="_blank" rel="noopener noreferrer">詳細を見る</a>
                                 </div>
-                            </div>
-                            <div class="pdf-card-content">
-                                <p class="pdf-card-benefit">✔ 夢中になれるモノが見つかる</p>
-                                <h3 class="pdf-card-title">自己探究ラボ</h3>
-                                <p class="pdf-card-date">東京都港区新橋</p>
-                                <p class="pdf-card-description">夢中になれるモノを見つける。</p>
-                                <button class="pdf-card-btn">詳細を見る</button>
                             </div>
                         </div>
-                    </div>
-                    
-                    <!-- スライド3: 長期インターン相談会 -->
-                    <div class="swiper-slide">
-                        <div class="pdf-card" data-pdf-url="pdfs/長期インターン相談会.pdf" data-title="長期インターン無料相談会">
-                            <div class="pdf-thumbnail-container">
-                                <canvas class="pdf-thumbnail" data-pdf-url="pdfs/長期インターン相談会.pdf"></canvas>
-                                <div class="pdf-loading">
-                                    <div class="pdf-loading-spinner"></div>
-                                    <p>読み込み中...</p>
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide">
+                            <div class="pdf-card">
+                                <canvas class="pdf-thumbnail" data-pdf-url="pdfs/自己探究ラボ.pdf" aria-label="自己探究ラボ"></canvas>
+                                <div class="pdf-card-body">
+                                    <h3 class="pdf-card-title">自己探究ラボ</h3>
+                                    <p class="pdf-card-description">強み・興味・価値観を言語化し、軸を作るサポートです。</p>
+                                    <a class="pdf-card-btn" href="pdfs/自己探究ラボ.pdf" target="_blank" rel="noopener noreferrer">詳細を見る</a>
                                 </div>
-                            </div>
-                            <div class="pdf-card-content">
-                                <p class="pdf-card-benefit">✔ 自分に合ったインターンがわかる</p>
-                                <h3 class="pdf-card-title">長期インターン無料相談会</h3>
-                                <p class="pdf-card-date">2026年2/11(水)～2/27(金)</p>
-                                <p class="pdf-card-description">適性チェック→最適インターン提案。</p>
-                                <button class="pdf-card-btn">詳細を見る</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <!-- ページネーション -->
-                <div class="swiper-pagination"></div>
             </div>
         </div>
     </section>
@@ -237,7 +209,7 @@
             
             <div class="about-content">
                 <div class="about-image">
-                    <img src="./images/self-discovery.jpg" alt="自己発見" class="illustration-warm" width="480" height="320">
+                    <div class="about-visual-placeholder" aria-hidden="true"></div>
                 </div>
                 <div class="about-text">
                     <div class="feature-item">
@@ -304,7 +276,6 @@
                 その結果として、長期インターンが最適だと判断した場合のみ、就活に直結するインターンの選択肢をご案内しています。
             </p>
 
-            <img src="./images/lp_support_group.png" alt="学生をサポートする学ナビ">
             <p class="section-subtitle">
                 <a href="#contact">無料｜就活ルート診断（60分）で整理する →</a>
             </p>
@@ -476,20 +447,9 @@
         <a href="#contact" class="fixed-cta-btn">無料｜就活ルート診断（60分）</a>
     </div>
 
-    <!-- PDFモーダル -->
-    <div id="pdfModal" class="pdf-modal">
-        <div class="pdf-modal-background"></div>
-        <div class="pdf-modal-content">
-            <button class="pdf-modal-close" aria-label="閉じる">&times;</button>
-            <h3 id="pdfModalTitle" class="pdf-modal-title"></h3>
-            <iframe id="pdfModalFrame" class="pdf-modal-iframe"></iframe>
-        </div>
-    </div>
-
     <!-- PDF.js -->
     <script src="libs/pdfjs/pdf.min.js"></script>
     <script>
-        // PDF.js workerの設定
         pdfjsLib.GlobalWorkerOptions.workerSrc = 'libs/pdfjs/pdf.worker.min.js';
     </script>
     

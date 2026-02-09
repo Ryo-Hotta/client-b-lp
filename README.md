@@ -37,7 +37,6 @@
 │   └── main.js                     (12.6KB) - JavaScript
 ├── images/                         ✅ 画像ファイル（すべてローカル）
 │   ├── hero-main.jpg               (1.2MB)  - Heroメインビジュアル
-│   ├── consultation.jpg            (1.1MB)  - 相談会イラスト
 │   └── self-discovery.jpg          (1.5MB)  - 自己発見イラスト
 ├── pdfs/                           ✅ PDFファイル（すべてローカル）
 │   ├── 早期化対策相談会.pdf        (211KB)  - イベントPDF1
@@ -65,9 +64,8 @@
 
 ### 画像
 - hero-main.jpg: 1.2MB
-- consultation.jpg: 1.1MB
 - self-discovery.jpg: 1.5MB
-- **小計**: 3.8MB
+- **小計**: 2.7MB
 
 ### PDF
 - 早期化対策相談会.pdf: 211KB
@@ -118,7 +116,6 @@
 ### 🎨 5. イラスト埋め込み（ローカル保存）
 - **Heroメインビジュアル**: `images/hero-main.jpg` (1.2MB)
 - **自己発見イラスト**: `images/self-discovery.jpg` (1.5MB)
-- **相談会イラスト**: `images/consultation.jpg` (1.1MB・使用予定)
 - **すべてnano-banana-proで生成・ダウンロード済み**
 - **配色統一**: パープル40% / ミント35% / コーラル15% / イエロー10%
 

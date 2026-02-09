@@ -13,41 +13,32 @@ window.addEventListener('load', () => {
 });
 
 // ========================================
-// PDF.js サムネイル生成
+// PDFサムネイル生成（PDF.js）
 // ========================================
 async function renderPDFThumbnail(canvas, pdfUrl) {
     try {
-        const loadingEl = canvas.parentElement.querySelector('.pdf-loading');
-        loadingEl.style.display = 'block';
-        
         const pdf = await pdfjsLib.getDocument(pdfUrl).promise;
         const page = await pdf.getPage(1);
         
-        const viewport = page.getViewport({ scale: 1.5 });
+        const scale = 1.3;
+        const viewport = page.getViewport({ scale });
         const context = canvas.getContext('2d');
         
-        canvas.height = viewport.height;
         canvas.width = viewport.width;
+        canvas.height = viewport.height;
         
         const renderContext = {
             canvasContext: context,
-            viewport: viewport
+            viewport
         };
         
         await page.render(renderContext).promise;
-        
-        loadingEl.style.display = 'none';
-        canvas.style.display = 'block';
-        
         console.log('✅ PDFサムネイル生成成功:', pdfUrl);
     } catch (error) {
         console.error('❌ PDFサムネイル生成エラー:', pdfUrl, error);
-        const loadingEl = canvas.parentElement.querySelector('.pdf-loading');
-        loadingEl.innerHTML = '<p style="color: #FF8A65;">読み込みエラー</p>';
     }
 }
 
-// すべてのPDFサムネイルを生成
 document.addEventListener('DOMContentLoaded', () => {
     const thumbnails = document.querySelectorAll('.pdf-thumbnail');
     thumbnails.forEach(canvas => {
@@ -56,101 +47,36 @@ document.addEventListener('DOMContentLoaded', () => {
             renderPDFThumbnail(canvas, pdfUrl);
         }
     });
-});
-
-// ========================================
-// Swiper初期化（スマホ想定: ゆっくり・エンドレス・左→右に流す）
-// ========================================
-document.addEventListener('DOMContentLoaded', () => {
-    const swiper = new Swiper('.pdf-swiper', {
-        slidesPerView: 1.15,
-        spaceBetween: 16,
-        centeredSlides: true,
-        loop: true,
-        loopAdditionalSlides: 2,
-        grabCursor: true,
-        speed: 5500,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-            reverseDirection: true,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        breakpoints: {
-            768: {
-                slidesPerView: 2,
-                spaceBetween: 24,
-                speed: 5000,
+    
+    const pdfSwiperEl = document.querySelector('.pdf-swiper');
+    if (pdfSwiperEl) {
+        new Swiper('.pdf-swiper', {
+            loop: true,
+            speed: 12000,
+            autoplay: {
+                delay: 0,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
             },
-            1024: {
-                slidesPerView: 2.5,
-                spaceBetween: 32,
-                speed: 5000,
-            }
-        }
-    });
-    
-    console.log('✅ Swiper初期化成功（エンドレス・左→右）');
-});
-
-// ========================================
-// PDFモーダル制御
-// ========================================
-const pdfModal = document.getElementById('pdfModal');
-const pdfModalFrame = document.getElementById('pdfModalFrame');
-const pdfModalTitle = document.getElementById('pdfModalTitle');
-const pdfModalClose = document.querySelector('.pdf-modal-close');
-const pdfModalBackground = document.querySelector('.pdf-modal-background');
-
-// PDFカードクリック
-document.addEventListener('click', (e) => {
-    const pdfCard = e.target.closest('.pdf-card');
-    if (pdfCard) {
-        const pdfUrl = pdfCard.dataset.pdfUrl;
-        const title = pdfCard.dataset.title;
-        
-        if (pdfUrl) {
-            openPDFModal(pdfUrl, title);
-        }
-    }
-});
-
-// モーダルを開く
-function openPDFModal(pdfUrl, title) {
-    pdfModalFrame.src = pdfUrl;
-    pdfModalTitle.textContent = title || 'イベント詳細';
-    pdfModal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-    
-    console.log('✅ PDFモーダル表示:', title);
-}
-
-// モーダルを閉じる
-function closePDFModal() {
-    pdfModal.classList.remove('active');
-    pdfModalFrame.src = '';
-    document.body.style.overflow = '';
-    
-    console.log('✅ PDFモーダル閉じる');
-}
-
-// 閉じるボタン
-if (pdfModalClose) {
-    pdfModalClose.addEventListener('click', closePDFModal);
-}
-
-// 背景クリック
-if (pdfModalBackground) {
-    pdfModalBackground.addEventListener('click', closePDFModal);
-}
-
-// ESCキー
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && pdfModal.classList.contains('active')) {
-        closePDFModal();
+            allowTouchMove: true,
+            centeredSlides: false,
+            slidesPerView: 1.15,
+            spaceBetween: 16,
+            freeMode: true,
+            freeModeMomentum: false,
+            freeModeMomentumBounce: false,
+            watchSlidesProgress: true,
+            breakpoints: {
+                769: {
+                    slidesPerView: 2.2,
+                    spaceBetween: 20,
+                },
+                1024: {
+                    slidesPerView: 3.1,
+                    spaceBetween: 24,
+                },
+            },
+        });
     }
 });
 
@@ -389,9 +315,6 @@ document.addEventListener('DOMContentLoaded', () => {
 console.log('🚀 学ナビLP - JavaScript読み込み完了');
 console.log('📋 機能リスト:');
 console.log('  ✅ ローディング画面');
-console.log('  ✅ PDF.jsサムネイル生成');
-console.log('  ✅ Swiper横スライド（autoplay: 3秒）');
-console.log('  ✅ PDFモーダル表示');
 console.log('  ✅ スムーススクロール');
 console.log('  ✅ 固定CTAボタン（SP）');
 console.log('  ✅ フォームバリデーション');
