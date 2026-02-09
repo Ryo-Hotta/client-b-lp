@@ -1,0 +1,22 @@
+# Cursor Rules for GakuNavi LP
+
+## General
+- This project is a static landing page.
+- Main file to edit is index.html.
+- Do NOT modify CSS or JS unless explicitly instructed.
+- Prefer minimal diffs and preserve existing structure.
+
+## Editing Policy
+- One step = one logical change.
+- Always propose a plan before editing.
+- Do not refactor or rename existing classes or IDs.
+- Reuse existing sections and components where possible.
+
+## Output
+- Always show a clear diff.
+- Clearly explain what the user should copy-paste.
+- Assume the user cannot read code.
+
+## Goal
+- Convert this LP into "学ナビ｜就活ルート診断" LP.
+- Primary CTA is "無料｜就活ルート診断（60分）".
