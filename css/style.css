@@ -173,7 +173,7 @@ a {
 }
 
 .header-cta-btn {
-    background-color: var(--sub-coral-orange);
+    background-color: #06C755;
     color: var(--text-secondary);
     padding: 12px 24px;
     border-radius: 50px;
@@ -182,7 +182,7 @@ a {
 }
 
 .header-cta-btn:hover {
-    background-color: var(--sub-coral-light);
+    background-color: #04a846;
     transform: translateY(-2px);
 }
 
@@ -353,6 +353,39 @@ a {
     background-color: var(--primary-dark-purple);
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(75, 46, 131, 0.4);
+}
+
+#contact .hero-cta-btn {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 420px;
+    margin: 14px auto 0;
+}
+
+#contact .line-add-button {
+    margin: 16px auto 0;
+    text-align: center;
+}
+
+#contact .line-add-button img {
+    max-width: 100%;
+    height: 48px;
+}
+
+.line-guide-text {
+    text-align: center;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.line-template-text {
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+    margin-top: 12px;
+    opacity: 0.9;
 }
 
 .hero-image {
